@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  margin: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  margin: 0px;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.subtitulo {
+  font-size: 8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 4ch;
+}
+h5 {
+  color: var(--c-7, #8f8f8f);
+}

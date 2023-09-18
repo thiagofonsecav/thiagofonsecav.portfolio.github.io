@@ -1,0 +1,131 @@
+.formacao {
+  background: #141414;
+  color: #fff;
+}
+.grid-formacao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 100px;
+}
+.formacao .subtitulo {
+  color: black;
+}
+.texto-formacao {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  color: #a3a3a3;
+}
+.texto-formacao strong {
+  color: #fff;
+}
+.faculdade-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.faculdade {
+  flex: 1; /*vai deixar do mesmo tamanho os elementos*/
+  background: black;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.faculdade-tipo {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  display: inline-block; /*devo aplicar esse display porque por padrao esse elemento é um span, e se eu definisse uma margem aqui ela não iria funcionar*/
+  margin-bottom: 10px;
+}
+
+.faculdade-curso {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  flex: 1; /*o flex só funciona se esse elemento for elemento filho de um elemento pai que foi definido como display flex*/
+}
+.faculdade-curso::before {
+  content: " ";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: url(./img/detalhe.svg) no-repeat center;
+  position: absolute;
+  left: -24px;
+}
+.instituicao {
+  font-size: 1.125rem;
+  color: #a3a3a3;
+}
+.cursos {
+  margin-bottom: 60px;
+}
+.formacao-extra h3 {
+  color: #8f8f8f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+.formacao-extra h3::before {
+  display: block;
+  content: " ";
+  width: 24px;
+  height: 24px;
+  background: url(./img/cursos.svg) no-repeat center;
+  position: absolute;
+  left: -36px;
+  top: -4px;
+}
+.cursos h3::before {
+  background: url(./img/cursos.svg) no-repeat center;
+}
+
+.idiomas h3::before {
+  background: url(./img/idiomas.svg);
+}
+.cursos-lista li {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+}
+.cursos-lista span {
+  color: #a3a3a3;
+}
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 660px) {
+  .grid-formacao {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    max-width: initial;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 470px) {
+  .subtitulo {
+    font-size: 4rem;
+  }
+  .texto-formacao {
+    font-size: 1.2rem;
+  }
+}
